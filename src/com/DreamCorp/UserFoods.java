@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class UserFoods extends Game {
 
+    // a method to handle the users food options to throw
+    // this generates random food options to display after every throw
     public static String foodGenerator(String[] foods) {
 
         Random generator = new Random();
@@ -13,14 +15,19 @@ public class UserFoods extends Game {
         return foods[random];
     }
 
+    // a method to hold all the options a user could choose and its outcome
     public static void userFoodOptions(String userChoice) {
 
+        // scanner takes in what user types (in all caps so its not case sensitive)
         Scanner scanner = new Scanner(System.in);
         userChoice = scanner.nextLine().toUpperCase();
 
         if (userChoice.toUpperCase().equals("APPLE")) {
+            // return what computer was hit by
             System.out.println("Computer was hit by an apple.");
+            // return players health and the damage it took
             System.out.println("Computers " + computerHealth + "HP - 4HP\n");
+            // subtract the damage from HP
             computerHealth -= 4;
         }
         else if (userChoice.toUpperCase().equals("TOMATO")) {

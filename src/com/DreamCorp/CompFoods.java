@@ -6,15 +6,21 @@ public class CompFoods extends UserFoods {
 
     public static int computerChoice;
 
+    // a method to hold all the options of computers choices and the outcome
     public static void computerFoodOptions(int computerChoice) {
 
+        // generator for computers random choices of items to throw
         Random generator = new Random();
-
+        // set variable computerChoice to a random integer from 0 - 7
         computerChoice = generator.nextInt(8);
 
+        // all the options
         if (computerChoice == 0) {
+            // return what comp. threw
             System.out.println("Computer threw an apple!");
+            // return players health and the damage it took
             System.out.println(Game.playerName + "'s " + playerHealth + "HP - 4HP\n");
+            // subtract the damage from HP
             playerHealth -= 4;
         }
         else if (computerChoice == 1) {
