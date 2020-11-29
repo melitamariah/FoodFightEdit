@@ -64,7 +64,7 @@ public class UserFoods extends Game {
             System.out.println("Enjoy that +5HP!");
             System.out.println(Game.playerName + "'s new HP = " + playerHealth + "HP\n");
         } else {
-            System.out.println("You misspelled, therefore a throw and a miss!\n");
+            System.out.println("You misspelled!!! Therefore, a throw and a miss!\n");
         }
 
     }

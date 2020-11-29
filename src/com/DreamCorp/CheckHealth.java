@@ -22,6 +22,9 @@ public class CheckHealth {
 
         }
         if (Game.computerHealth <= 0) {
+            System.out.println("--*Final Health*--");
+            System.out.println("Computer = " + Game.computerHealth + "HP");
+            System.out.println(Game.playerName + " = " + Game.playerHealth + "HP\n");
             System.out.println("Nice arm, " + Game.playerName + "! You win!");
             wins++;
             System.out.println(Game.playerName + "s " + "Wins: " + wins + " | Losses: " + losses);
@@ -30,6 +33,9 @@ public class CheckHealth {
             Game.computerHealth = 25;
         }
         if (Game.playerHealth <= 0) {
+            System.out.println("--*Final Health*--");
+            System.out.println("Computer = " + Game.computerHealth + "HP");
+            System.out.println(Game.playerName + " = " + Game.playerHealth + "HP\n");
             System.out.println(Game.playerName + ", take this L! Computer wins!");
             losses++;
             System.out.println(Game.playerName + "s " + "Wins: " + wins + " | Losses: " + losses);
